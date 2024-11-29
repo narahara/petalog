@@ -1,11 +1,17 @@
 syntax = "proto3";
 
-package test;
+package petalog.domain.entity;
 
 option go_package = "./entity";
 
 message User {
     string userId = 1;
+    string userName = 2;
+    int32 gender = 3;
+    string birthday = 4;
+    string email = 5;
+    string country = 6;
+    string zipCode = 7;
 }
 
 

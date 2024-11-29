@@ -1,0 +1,7 @@
+{
+    "protoc": {
+        "options": [
+            "common/pb/service/app",
+        ]
+    }
+}

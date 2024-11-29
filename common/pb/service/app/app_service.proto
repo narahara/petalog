@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package app;
+
+option go_package = "./entity";
+
+service AppService {
+    rpc Ping(PingRequest) returns (PingResponse) {}
+}

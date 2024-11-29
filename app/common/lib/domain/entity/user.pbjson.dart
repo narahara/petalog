@@ -18,10 +18,19 @@ const User$json = {
   '1': 'User',
   '2': [
     {'1': 'userId', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'userName', '3': 2, '4': 1, '5': 9, '10': 'userName'},
+    {'1': 'gender', '3': 3, '4': 1, '5': 5, '10': 'gender'},
+    {'1': 'birthday', '3': 4, '4': 1, '5': 9, '10': 'birthday'},
+    {'1': 'email', '3': 5, '4': 1, '5': 9, '10': 'email'},
+    {'1': 'country', '3': 6, '4': 1, '5': 9, '10': 'country'},
+    {'1': 'zipCode', '3': 7, '4': 1, '5': 9, '10': 'zipCode'},
   ],
 };
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
-    'CgRVc2VyEhYKBnVzZXJJZBgBIAEoCVIGdXNlcklk');
+    'CgRVc2VyEhYKBnVzZXJJZBgBIAEoCVIGdXNlcklkEhoKCHVzZXJOYW1lGAIgASgJUgh1c2VyTm'
+    'FtZRIWCgZnZW5kZXIYAyABKAVSBmdlbmRlchIaCghiaXJ0aGRheRgEIAEoCVIIYmlydGhkYXkS'
+    'FAoFZW1haWwYBSABKAlSBWVtYWlsEhgKB2NvdW50cnkYBiABKAlSB2NvdW50cnkSGAoHemlwQ2'
+    '9kZRgHIAEoCVIHemlwQ29kZQ==');
 

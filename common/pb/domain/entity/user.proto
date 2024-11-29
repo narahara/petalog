@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package test;
+
+option go_package = "./entity";
+
+message User {
+    string userId = 1;
+}
+
+

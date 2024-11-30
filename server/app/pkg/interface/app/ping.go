@@ -1,4 +1,4 @@
-package grpc_handler
+package app_handler
 
 import (
 	"common/pkg/service/app"

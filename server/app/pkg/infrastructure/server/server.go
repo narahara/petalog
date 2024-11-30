@@ -2,7 +2,7 @@ package server
 
 import (
 	"app/pkg/infrastructure/config"
-	grpc_handler "app/pkg/interface/grpc"
+	app_handler "app/pkg/interface/app"
 	utilNet "common/pkg/util/net"
 	"fmt"
 	"net"
@@ -21,10 +21,10 @@ type Server interface {
 
 type server struct {
 	config  *config.Config
-	handler grpc_handler.AppHandlerInterface
+	handler app_handler.AppHandlerInterface
 }
 
-func NewServer(config *config.Config, handler grpc_handler.AppHandlerInterface) Server {
+func NewServer(config *config.Config, handler app_handler.AppHandlerInterface) Server {
 	return &server{
 		config:  config,
 		handler: handler,

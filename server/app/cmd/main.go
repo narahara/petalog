@@ -3,7 +3,7 @@ package main
 import (
 	"app/pkg/infrastructure/config"
 	"app/pkg/infrastructure/server"
-	grpc_handler "app/pkg/interface/grpc"
+	app_handler "app/pkg/interface/app"
 	"flag"
 	"log"
 )
@@ -18,12 +18,11 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	handler := grpc_handler.NewAppHandler()
+	handler := app_handler.NewAppHandler()
 	server := server.NewServer(config, handler)
 
 	err = server.Run()
 	if err != nil {
 		log.Fatalln(err)
 	}
-
 }

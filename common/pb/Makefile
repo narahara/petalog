@@ -5,6 +5,7 @@ all: setup build_domain build_app build_console
 
 setup:
 	mkdir -p $(APP_HOME)/server/console/ui/src/domain/entity
+	mkdir -p $(APP_HOME)/server/console/ui/src/dto
 	mkdir -p $(APP_HOME)/server/common/pkg/domain
 	mkdir -p $(APP_HOME)/server/common/pkg/service
 
@@ -44,6 +45,15 @@ build_console:
 		--grpc-gateway_out $(APP_HOME)/server/common/pkg/service \
 		--grpc-gateway_opt logtostderr=true \
 		service/console/*.proto
+	pbjs \
+		-t static-module \
+		-w commonjs \
+		-o $(APP_HOME)/server/console/ui/src/dto/dto.js \
+		-p . \
+		service/console/*_dto.proto
+	pbts \
+		-o $(APP_HOME)/server/console/ui/src/dto/dto.d.ts \
+		$(APP_HOME)/server/console/ui/src/dto/dto.js
 
 install_go:
 	go install google.golang.org/protobuf/cmd/protoc-gen-go@latest

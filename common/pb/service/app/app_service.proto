@@ -1,8 +1,10 @@
 syntax = "proto3";
 
-package app;
+package petalog.service.app;
 
-option go_package = "./entity";
+option go_package = "./app";
+
+import "service/app/app_service_dto.proto";
 
 service AppService {
     rpc Ping(PingRequest) returns (PingResponse) {}

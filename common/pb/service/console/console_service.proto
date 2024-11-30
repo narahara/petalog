@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package petalog.service.console;
+
+option go_package = "./console";
+
+import "google/api/annotations.proto";
+import "service/console/console_service_dto.proto";
+
+service ConsoleService {
+    rpc Ping(PingRequest) returns (PingResponse) {
+        option (google.api.http) = {
+            get: "/ping"
+        };
+    }
+}

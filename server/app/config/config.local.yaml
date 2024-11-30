@@ -1,0 +1,8 @@
+stage: local # local, dev, stg, prod
+db:
+  host: localhost
+  port: 3306
+  user: app
+  password: password
+  database: test
+port: 9000

@@ -1,7 +1,8 @@
 {
     "protoc": {
         "options": [
-            "common/pb/service/app",
+            "--proto_path=common/pb",
+            "--proto_path=.go/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@v1.16.0/third_party/googleapis",
         ]
     }
 }
